@@ -1,0 +1,42 @@
+.App {
+  font-family: sans-serif;
+}
+
+article {
+  width: 300px;
+  margin: 2rem auto;
+  border-bottom: solid 1px #ccc;
+  border-top: solid 1px #ccc;
+}
+
+article header {
+  padding: 0.5rem;
+}
+
+article section {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: solid 1px #ccc;
+  margin: 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.3rem;
+}
+
+article footer {
+  padding: 0.5rem;
+  display: flex;
+}
+article footer div {
+  margin-right: 2rem;
+  display: inline-flex;
+}
+article footer div:hover {
+  color: #a20015;
+  cursor: pointer;
+}
+article footer div span {
+  border: solid 1px #ccc;
+  padding: 0 0.5rem;
+  margin-left: 0.5rem;
+  border-radius: 5px;
+}
