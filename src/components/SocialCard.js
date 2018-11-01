@@ -28,12 +28,6 @@ class SocialCard extends Component {
         status: { ...prevState.status, [param]: !prevState.status[param] }
       };
     });
-
-    /* {
-      ...prevState,
-      status: { ...prevState.status, [param]: !prevState.status[param] }
-*/
-    console.log(this.state);
   };
 
   render() {
