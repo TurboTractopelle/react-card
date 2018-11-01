@@ -12,6 +12,15 @@ class SocialCard extends Component {
     };
   }
 
+  handleSocial = param => {
+    this.setState(prevState => ({
+      ...prevState,
+      status: { ...prevState.status, [param]: !prevState.status[param] }
+    }));
+
+    console.log(this.state);
+  };
+
   render() {
     const { title, author, social, content } = this.state.data;
     const { status } = this.state;
@@ -20,7 +29,11 @@ class SocialCard extends Component {
       <article>
         <Scheader title={title} author={author} />
         <Sccontent content={content} />
-        <Scsocial social={social} status={status} />
+        <Scsocial
+          social={social}
+          status={status}
+          handleSocial={this.handleSocial}
+        />
       </article>
     );
   }

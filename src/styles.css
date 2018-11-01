@@ -40,3 +40,8 @@ article footer div span {
   margin-left: 0.5rem;
   border-radius: 5px;
 }
+
+article footer div.active span {
+  border: solid 1px green;
+  color:green
+}
