@@ -13,11 +13,26 @@ class SocialCard extends Component {
   }
 
   handleSocial = param => {
-    this.setState(prevState => ({
+    this.setState(prevState => {
+      let modif = 0;
+      prevState.status[param] ? (modif = -1) : (modif = +1);
+
+      return {
+        data: {
+          ...prevState.data,
+          social: {
+            ...prevState.data.social,
+            [param]: prevState.data.social[param] + modif
+          }
+        },
+        status: { ...prevState.status, [param]: !prevState.status[param] }
+      };
+    });
+
+    /* {
       ...prevState,
       status: { ...prevState.status, [param]: !prevState.status[param] }
-    }));
-
+*/
     console.log(this.state);
   };
 
